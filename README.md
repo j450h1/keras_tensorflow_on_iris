@@ -19,7 +19,8 @@ iris %>% as_tibble %>% gather(feature, value, -Species) %>%
 
 ### Aim
 
-Our aim is to connect the 4 input features (`Sepal.Length`, `Sepal.Width`, `Petal.Length` and `Petal.Width`) to the correct output class (`setosa` `versicolor` and `virginica`) using an artificial neural network. For this task, we have chosen the following simple architecture with one input layer with 4 neurons (one for each feature), one hidden layer with 4 neurons and one output layer with 3 neurons (one for each class), all fully connected:
+Our aim is to connect the 4 input features (`Sepal.Length`, `Sepal.Width`, `Petal.Length` and `Petal.Width`) to the correct output class (`setosa` `versicolor` and `virginica`) using an 
+ificial neural network. For this task, we have chosen the following simple architecture with one input layer with 4 neurons (one for each feature), one hidden layer with 4 neurons and one output layer with 3 neurons (one for each class), all fully connected:
 
 <img src="img/architecture_visualisation.png" width="500px" style="display: block; margin: auto;" />
 
@@ -96,7 +97,7 @@ y_test  = nn_dat %>% filter(partition == 'test')  %>% pull(class_num) %>% to_cat
 
 ### Set Architecture
 
-With the data in place, we now set the architecture of our artificical neural network:
+With the data in place, we now set the architecture of our artificial neural network:
 
 ``` r
 model = keras_model_sequential()
